@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 
@@ -13,6 +14,7 @@ export const FormSignInEmail = () => {
         <Label>パスワード</Label>
         <Input />
       </div>
+      <Button className="w-full">ログイン</Button>
     </div>
   )
 }
