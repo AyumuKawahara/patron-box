@@ -2,10 +2,18 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 
-export const FormSignInEmail = () => {
+type Props = {
+  mode: 'sign-in' | 'sign-up'
+}
+
+export const FormAuthEmail = ({ mode }: Props) => {
   return (
-    <div>
-      <p>メールアドレスでログイン</p>
+    <form>
+      <p>
+        {mode === 'sign-in'
+          ? 'メールアドレスでログイン'
+          : 'メールアドレスで無料新規登録'}
+      </p>
       <div className="flex flex-col gap-y-1">
         <Label>メールアドレス</Label>
         <Input />
@@ -15,6 +23,6 @@ export const FormSignInEmail = () => {
         <Input />
       </div>
       <Button className="w-full">ログイン</Button>
-    </div>
+    </form>
   )
 }
