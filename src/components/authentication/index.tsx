@@ -9,15 +9,17 @@ type Props = {
 
 export const Authentication = ({ mode }: Props) => {
   return (
-    <div className="border max-w-[500px] w-full mx-auto p-6 rounded-md flex flex-col gap-y-8">
+    <div className="border border-gray max-w-[500px] w-full mx-auto px-6 py-8 rounded-md flex flex-col gap-y-8">
       <FormAuthEmail mode={mode} />
       <Separator />
       <ButtonsOAuth mode={mode} />
       <Link
         href={mode === 'sign-in' ? '/ja/sign-up' : '/ja/sign-in'}
-        className="text-center"
+        className="text-center text-vividBlue underline"
       >
-        アカウントをお持ちでない方はこちら
+        {mode === 'sign-in'
+          ? 'アカウントをお持ちでない方はこちら'
+          : 'すでにアカウントをお持ちの方はこちら'}
       </Link>
     </div>
   )

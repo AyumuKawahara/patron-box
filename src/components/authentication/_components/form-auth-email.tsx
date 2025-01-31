@@ -3,6 +3,8 @@
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import Link from 'next/link'
+import { DialogResetPassword } from './dialog-reset-password'
 
 type Props = {
   mode: 'sign-in' | 'sign-up'
@@ -27,6 +29,7 @@ export const FormAuthEmail = ({ mode }: Props) => {
         </div>
         <Button className="w-full">ログイン</Button>
       </div>
+      {mode === 'sign-in' && <DialogResetPassword />}
     </form>
   )
 }
