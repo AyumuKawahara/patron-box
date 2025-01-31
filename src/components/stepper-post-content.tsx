@@ -5,17 +5,19 @@ import { FaCheck } from 'react-icons/fa'
 import { twMerge } from 'tailwind-merge'
 
 const STEPS = [
-  'select-media',
-  'upload-content',
-  'set-metadata',
-  'pricing',
-  'complete',
+  ['select-media'],
+  ['upload-image', 'upload-video', 'write-article'],
+  ['set-metadata'],
+  ['pricing'],
+  ['complete'],
 ]
 
 export const StepperPostContent = () => {
   const pathname = usePathname()
   const pathnameWithoutLanguage = pathname.split('/')[2]
-  const currentStepIndex = STEPS.indexOf(pathnameWithoutLanguage)
+  const currentStepIndex = STEPS.findIndex((step) =>
+    step.includes(pathnameWithoutLanguage),
+  )
 
   return (
     <div className="flex gap-x-1 justify-center">

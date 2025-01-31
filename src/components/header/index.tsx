@@ -8,7 +8,7 @@ export const Header = () => {
       <Link href="/ja">PatronBox</Link>
       <div className="flex items-center gap-x-6">
         <Link
-          href="/ja/upload-content"
+          href="/ja/select-media"
           className="flex flex-col items-center text-vividBlue"
         >
           <HiPlusCircle size={30} />
