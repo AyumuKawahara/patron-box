@@ -6,7 +6,7 @@ import { SlNote } from 'react-icons/sl'
 
 export default function SelectMediaPage() {
   return (
-    <div className="flex flex-col items-center gap-y-10 pt-[50px] ">
+    <div className="flex flex-col items-center gap-y-10 pt-[50px] pb-16 md:pb-20">
       <h1 className="text-xl font-bold">
         アップロードするコンテンツの形式を選択
       </h1>

@@ -9,7 +9,7 @@ export const Header = () => {
       <div className="flex items-center gap-x-6">
         <Link
           href="/ja/select-media"
-          className="flex flex-col items-center text-vividBlue"
+          className="flex flex-col items-center"
         >
           <HiPlusCircle size={30} />
           <span className="text-xs">投稿</span>

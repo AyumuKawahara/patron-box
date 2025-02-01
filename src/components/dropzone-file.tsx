@@ -2,6 +2,7 @@
 
 import { useCallback } from 'react'
 import { useDropzone } from 'react-dropzone'
+import { IoCloudUploadOutline } from 'react-icons/io5'
 import { twMerge } from 'tailwind-merge'
 
 type Props = {
@@ -20,12 +21,13 @@ export const DropzoneFile = ({ mediaType, className }: Props) => {
     <div
       {...getRootProps()}
       className={twMerge(
-        'border-[1.5px] border-dashed border-black flex flex-col items-center justify-center max-w-[800px] h-[50vh] w-full cursor-pointer rounded-md',
+        'border-[1.5px] border-dashed border-black flex flex-col items-center justify-center max-w-[800px] h-[40vh] w-full cursor-pointer rounded-md',
         isDragActive && 'bg-black/10',
         className,
       )}
     >
       <input {...getInputProps()} />
+      <IoCloudUploadOutline size={50} />
       {isDragActive ? (
         <p>ファイルをドロップしてください...</p>
       ) : (
